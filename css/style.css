@@ -224,14 +224,6 @@ input[type="range"] { width: 100%; accent-color: var(--gold); direction: ltr; he
 .play::before { content: ""; position: absolute; left: 15px; top: 12px; border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent var(--cream); }
 .work-card:hover .play { background: var(--gold); transform: scale(1.08); }
 
-.film-card { display: grid; grid-template-columns: 240px 1fr; border-radius: var(--radius); overflow: hidden; background: rgba(255, 255, 255, .03); box-shadow: inset 0 0 0 1px rgba(198, 153, 99, .25); }
-.film-slate { display: grid; align-content: center; gap: .6rem; padding: 1.6rem; direction: ltr; font-family: var(--en); letter-spacing: .25em; font-size: .8rem; color: var(--cream);
-  background: repeating-linear-gradient(-45deg, #111 0 18px, var(--cream) 18px 36px) top / 100% 22px no-repeat, var(--navy-deep); padding-top: calc(22px + 1.6rem); }
-.film-slate span { border-bottom: 1px solid rgba(245, 235, 224, .2); padding-bottom: .5rem; }
-.film-body { padding: clamp(22px, 3vw, 36px); }
-.film-body h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin: .4rem 0 .8rem; }
-.film-body h3 em { font-family: var(--en); font-weight: 400; color: var(--gold); font-size: .7em; margin-inline-start: .4em; }
-.film-body p { color: var(--muted-dark); max-width: 640px; }
 
 .lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 460px); max-height: 92vh; overflow: visible; }
 .lightbox::backdrop { background: rgba(4, 10, 16, .88); backdrop-filter: blur(6px); }
@@ -380,7 +372,6 @@ legend { font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 600; margin-bott
   .hud-top span:last-child, .hud-bottom { display: none; }
   .hud-top, .hud-bottom { left: 40px; right: 40px; font-size: .72rem; }
   .fields { grid-template-columns: 1fr; }
-  .film-card { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
   .work-card { scroll-snap-align: start; }
   .steps li { font-size: 0; gap: 0; justify-content: center; }
