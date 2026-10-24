@@ -114,7 +114,7 @@ section { position: relative; padding-block: clamp(80px, 12vw, 140px); }
 .reveal.in { opacity: 1; transform: none; }
 
 /* Hero */
-.hero { min-height: 100svh; display: grid; place-items: center; overflow: hidden; padding-block: 120px 100px; }
+.hero { min-height: 100svh; display: grid; place-items: center; overflow: hidden; padding-block: 140px 190px; }
 .spotlight {
   position: absolute; inset: 0; pointer-events: none;
   background:
@@ -145,7 +145,7 @@ section { position: relative; padding-block: clamp(80px, 12vw, 140px); }
 .rec { display: inline-flex; align-items: center; gap: .5em; color: #ff6b5b; }
 .rec b { width: 9px; height: 9px; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 10px #ff3b30; animation: blink 1.2s steps(2) infinite; }
 @keyframes blink { 50% { opacity: .15; } }
-.hud-focus { position: absolute; width: 80px; height: 80px; left: calc(var(--fx, 50%) - 40px); top: calc(var(--fy, 50%) - 40px); color: var(--gold); transition: left .6s var(--ease), top .6s var(--ease); }
+.hud-focus { position: absolute; width: 80px; height: 80px; left: calc(var(--fx, 18%) - 40px); top: calc(var(--fy, 68%) - 40px); color: var(--gold); transition: left .6s var(--ease), top .6s var(--ease); }
 
 .hero-content { position: relative; z-index: 2; text-align: center; max-width: 920px; padding-inline: var(--gutter); }
 .tagline { font-size: clamp(.72rem, 1.4vw, .95rem); color: var(--gold); margin-bottom: 1.6rem; }
@@ -158,7 +158,7 @@ section { position: relative; padding-block: clamp(80px, 12vw, 140px); }
 .hero-actions { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; pointer-events: auto; }
 .reveal:nth-child(2) { --d: .12s; } .reveal:nth-child(3) { --d: .24s; } .reveal:nth-child(4) { --d: .36s; }
 
-.scroll-cue { position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .6rem; color: var(--muted-dark); z-index: 3; }
+.scroll-cue { position: absolute; bottom: 96px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .6rem; color: var(--muted-dark); z-index: 3; }
 .scroll-cue small { font-family: var(--en); letter-spacing: .25em; font-size: .7rem; }
 .mouse { width: 24px; height: 38px; border: 1.5px solid rgba(245, 235, 224, .55); border-radius: 14px; display: flex; justify-content: center; padding-top: 7px; }
 .mouse span { width: 3px; height: 8px; background: var(--gold); border-radius: 2px; animation: wheel 1.8s var(--ease) infinite; }
@@ -352,6 +352,10 @@ legend { font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 600; margin-bott
 .copy { text-align: center; font-size: .8rem; color: rgba(245, 235, 224, .45); margin-top: 24px; padding-inline: var(--gutter); }
 
 /* Responsive */
+/* Short laptop screens: keep the hero headline inside one viewport */
+@media (min-width: 761px) and (max-height: 860px) {
+  .hero-title { font-size: clamp(2rem, 4.6vw, 3.3rem); }
+}
 @media (max-width: 980px) {
   .grader, .menu-showcase { grid-template-columns: 1fr; }
   .pillars, .service-grid { grid-template-columns: 1fr; }
@@ -369,7 +373,7 @@ legend { font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 600; margin-bott
   .nav-links.open { transform: none; visibility: visible; }
   .nav-links a { padding: .9rem 0; border-bottom: 1px solid rgba(245, 235, 224, .06); font-size: 1.05rem; }
   .nav-links a::after { display: none; }
-  .hud-top span:last-child, .hud-bottom { display: none; }
+  .hud-top span:last-child, .hud-bottom, .hud-focus { display: none; }
   .hud-top, .hud-bottom { left: 40px; right: 40px; font-size: .72rem; }
   .fields { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
@@ -379,6 +383,7 @@ legend { font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 600; margin-bott
   .summary div { grid-template-columns: 1fr; gap: .2rem; }
   .footer-meta { align-items: flex-start; }
   .scroll-cue { bottom: 28px; }
+  .hero { padding-bottom: 130px; }
   .step-actions .btn { flex: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
