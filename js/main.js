@@ -54,12 +54,6 @@
     hud.style.setProperty('--fy', `${fy}px`);
   });
 
-  const gridToggle = $('#gridToggle');
-  gridToggle.addEventListener('click', () => {
-    const off = $('#hudGrid').classList.toggle('off');
-    gridToggle.setAttribute('aria-pressed', !off);
-  });
-
   // Timecode at 24 fps (HH:MM:SS:FF), running from page load
   const tcEl = $('#timecode');
   const t0 = performance.now();
@@ -173,9 +167,18 @@
   $('#lightboxClose').addEventListener('click', () => lightbox.close());
   lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
 
-  const esc = s => s.replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+  /* ---------- Floating WhatsApp: hidden over the hero and the form ---------- */
+  const waFloat = $('#waFloat');
+  const hiders = new Set();
+  const floatIO = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting ? hiders.add(e.target) : hiders.delete(e.target));
+    waFloat.classList.toggle('show', hiders.size === 0);
+  });
+  [$('#hero'), $('#contact')].forEach(el => floatIO.observe(el));
 
-  /* ---------- Project configurator ---------- */
+  /* ---------- Project form: two steps, sends a prefilled WhatsApp message ---------- */
+  // Studio WhatsApp number, international format, digits only
+  const WHATSAPP_NUMBER = '97339006824';
   const form = $('#configurator');
   const panels = $$('.step-panel', form);
   const stepDots = $$('.steps li', form);
@@ -191,7 +194,6 @@
       li.classList.toggle('active', s === n);
       li.classList.toggle('done', s < n);
     });
-    if (n === 3) renderSummary();
     panels[n - 1].querySelector('input, button')?.focus({ preventScroll: true });
   };
 
@@ -201,26 +203,12 @@
       errScope.textContent = ok ? '' : 'اختر نوع المشروع لنكمل.';
       return ok;
     }
-    if (n === 2) {
-      const req = ['name', 'brand', 'phone'].map(k => form.elements[k]);
-      req.forEach(el => { el.value = el.value.trim(); el.classList.toggle('invalid', !el.checkValidity()); });
-      const bad = req.find(el => !el.checkValidity());
-      errFields.textContent = !bad ? '' : bad.name === 'phone' ? 'أدخل رقم هاتف صحيحاً (8 أرقام على الأقل).' : 'يرجى تعبئة الحقول المطلوبة.';
-      bad?.focus();
-      return !bad;
-    }
-    return true;
-  };
-
-  const renderSummary = () => {
-    const rows = [
-      ['نوع المشروع', form.scope.value],
-      ['الاسم', form.elements.name.value],
-      ['العلامة / الشركة', form.brand.value],
-      ['الهاتف / واتساب', form.phone.value],
-      ['النبذة', form.brief.value.trim() || '—']
-    ];
-    $('#summary').innerHTML = rows.map(([k, v]) => `<div><dt>${k}</dt><dd dir="auto">${esc(v)}</dd></div>`).join('');
+    const name = form.elements.name;
+    name.value = name.value.trim();
+    name.classList.toggle('invalid', !name.value);
+    errFields.textContent = name.value ? '' : 'اكتب اسمك لنعرف بمن نتواصل.';
+    if (!name.value) name.focus();
+    return !!name.value;
   };
 
   form.addEventListener('click', e => {
@@ -229,41 +217,35 @@
   });
   form.addEventListener('change', e => {
     if (e.target.name === 'scope') errScope.textContent = '';
-    if (e.target.classList.contains('invalid') && e.target.checkValidity()) e.target.classList.remove('invalid');
+    if (e.target.classList.contains('invalid') && e.target.value.trim()) e.target.classList.remove('invalid');
   });
 
-  // Studio WhatsApp number, international format, digits only (e.g. '97333124455')
-  const WHATSAPP_NUMBER = '97339006824';
+  // Service buttons preselect the matching project type
+  $$('[data-scope]').forEach(a => a.addEventListener('click', () => {
+    const r = $(`input[name="scope"][value="${a.dataset.scope}"]`, form);
+    if (r) { r.checked = true; errScope.textContent = ''; }
+  }));
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    if (step !== 3) return;
-    if (WHATSAPP_NUMBER) {
-      const text = [
-        'مرحباً استوديو نقش، أود بدء مشروع جديد:',
-        `• نوع المشروع: ${form.scope.value}`,
-        `• الاسم: ${form.elements.name.value}`,
-        `• العلامة / الشركة: ${form.brand.value}`,
-        `• الهاتف: ${form.phone.value}`,
-        form.brief.value.trim() && `• النبذة: ${form.brief.value.trim()}`
-      ].filter(Boolean).join('\n');
-      // opened synchronously inside the submit gesture so popup blockers allow it
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
-    }
-    const btn = $('#submitBtn');
-    btn.classList.add('loading');
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.classList.remove('loading');
-      btn.disabled = false;
-      panels.forEach(p => { p.hidden = true; });
-      $('.steps', form).hidden = true;
-      const phone = Object.assign(document.createElement('bdi'), { dir: 'ltr', textContent: form.phone.value });
-      $('#successMsg').replaceChildren(
-        `شكراً ${form.elements.name.value}، استلمنا تفاصيل مشروع «${form.scope.value}» لعلامة ${form.brand.value}. سيتواصل معك فريق نقش على `,
-        phone, ' خلال 24 ساعة.');
-      $('#success').hidden = false;
-    }, 1400);
+    if (step !== 2 || !validate(2)) return;
+    const f = form.elements;
+    const text = [
+      'مرحباً استوديو نقش، أود الحصول على عرض لمشروع:',
+      `• نوع المشروع: ${f.scope.value}`,
+      f.when.value && `• الموعد: ${f.when.value}`,
+      `• الاسم: ${f.name.value}`,
+      f.brand.value.trim() && `• العلامة / الشركة: ${f.brand.value.trim()}`,
+      f.brief.value.trim() && `• النبذة: ${f.brief.value.trim()}`
+    ].filter(Boolean).join('\n');
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    // opened synchronously inside the submit gesture so popup blockers allow it
+    window.open(url, '_blank', 'noopener');
+    $('#waRetry').href = url;
+    panels.forEach(p => { p.hidden = true; });
+    $('.steps', form).hidden = true;
+    $('#successMsg').textContent = `شكراً ${f.name.value}. فتحنا لك واتساب برسالة فيها تفاصيل «${f.scope.value}». بعد أن تضغط «إرسال» هناك، نرد عليك خلال 24 ساعة.`;
+    $('#success').hidden = false;
   });
 
   $('#resetBtn').addEventListener('click', () => {

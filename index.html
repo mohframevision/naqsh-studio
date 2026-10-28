@@ -3,12 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Naqsh Studio | استوديو نقش — إنتاج وتصوير سينمائي في البحرين</title>
-  <meta name="description" content="استوديو نقش للإنتاج البصري في البحرين: إعلانات تجارية، أفلام وثائقية، تصوير سينمائي، مونتاج وتلوين.">
+  <title>استوديو نقش | إعلانات وريلز وتصوير فيديو في البحرين — Naqsh Studio</title>
+  <meta name="description" content="استوديو نقش لإنتاج الفيديو في البحرين: إعلانات وريلز للمطاعم والمقاهي والعلامات، باقات محتوى شهرية، وأفلام تعريفية. تصوير حقيقي وموشن ثلاثي الأبعاد، وعرض مكتوب خلال 24 ساعة.">
   <meta name="theme-color" content="#091724">
+  <link rel="canonical" href="https://mohframevision.github.io/naqsh-studio/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="media/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_BH">
+  <meta property="og:site_name" content="Naqsh Studio | استوديو نقش">
+  <meta property="og:title" content="استوديو نقش | إعلانات وريلز سينمائية لعلامتك في البحرين">
+  <meta property="og:description" content="نكتب الفكرة، نصوّر، ونمنتج حتى يصلك فيديو جاهز للنشر. اطلب عرضاً مجانياً خلال 24 ساعة.">
+  <meta property="og:url" content="https://mohframevision.github.io/naqsh-studio/">
+  <meta property="og:image" content="https://mohframevision.github.io/naqsh-studio/media/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Naqsh Studio — استوديو نقش",
+    "description": "إنتاج فيديو في البحرين: إعلانات وريلز، باقات محتوى شهرية، وأفلام تعريفية وتغطيات.",
+    "url": "https://mohframevision.github.io/naqsh-studio/",
+    "logo": "https://mohframevision.github.io/naqsh-studio/media/icon-512.png",
+    "image": "https://mohframevision.github.io/naqsh-studio/media/og.jpg",
+    "telephone": "+97339006824",
+    "email": "nagsh.media@gmail.com",
+    "areaServed": { "@type": "Country", "name": "Bahrain" },
+    "address": { "@type": "PostalAddress", "addressCountry": "BH" },
+    "sameAs": ["https://instagram.com/nagsh.media"],
+    "knowsLanguage": ["ar", "en"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -32,13 +62,13 @@
       <span class="wordmark">Naqsh <em>Studio</em></span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
-      <a href="#lab">المختبر</a>
       <a href="#work">أعمالنا</a>
       <a href="#services">الخدمات</a>
+      <a href="#process">كيف نعمل</a>
       <a href="#team">الفريق</a>
-      <a href="#contact">تواصل</a>
+      <a href="#faq">الأسئلة</a>
     </nav>
-    <a class="btn btn-gold nav-cta" href="#contact">ابدأ مشروعك</a>
+    <a class="btn btn-gold nav-cta" href="#contact" data-cta="nav">اطلب عرضاً</a>
     <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
   </header>
 
@@ -51,7 +81,7 @@
       <div class="hud" aria-hidden="true">
         <span class="hud-corner tl"></span><span class="hud-corner tr"></span>
         <span class="hud-corner bl"></span><span class="hud-corner br"></span>
-        <div class="hud-grid" id="hudGrid"><i></i><i></i><i></i><i></i></div>
+        <div class="hud-grid"><i></i><i></i><i></i><i></i></div>
         <div class="hud-top">
           <span class="rec"><b></b>REC</span>
           <span class="tc" id="timecode">00:00:00:00</span>
@@ -64,33 +94,88 @@
       </div>
 
       <div class="hero-content">
-        <p class="tagline reveal">PRODUCTION · CINEMATOGRAPHY · EDIT</p>
+        <p class="tagline reveal">VIDEO PRODUCTION · BAHRAIN</p>
         <h1 class="hero-title reveal">
-          <span>الكادر ليس مجرّد فيديو،</span>
-          <span class="gold">إنه الانطباع الأول</span>
-          <span>الذي يضاعف قيمة علامتك.</span>
+          <span>إعلانات وريلز سينمائية</span>
+          <span class="gold">توقف التمرير</span>
+          <span>وتجلب الطلبات لعلامتك.</span>
         </h1>
-        <p class="hero-sub reveal">في <strong>استوديو نقش</strong> نهندس كل لقطة لتقول عن علامتك ما لا تستطيع الكلمات قوله: ثقة، فخامة، وحضور يبقى في الذاكرة.</p>
+        <p class="hero-sub reveal"><strong>استوديو نقش</strong> في البحرين يكتب الفكرة، يصوّر، ويمنتج بنفسه حتى يصلك فيديو جاهز للنشر. تصوير حقيقي بلا لقطات جاهزة، وموشن جرافيك وعناصر ثلاثية الأبعاد من داخل الفريق.</p>
         <div class="hero-actions reveal">
-          <a class="btn btn-gold" href="#contact">ابدأ مشروعك</a>
-          <a class="btn btn-ghost" href="#lab">اكتشف طريقتنا</a>
-          <button class="btn btn-ghost small" id="gridToggle" aria-pressed="true">شبكة الأثلاث</button>
+          <a class="btn btn-gold" href="#contact" data-cta="hero">اطلب عرضاً لمشروعك</a>
+          <a class="btn btn-ghost" href="#work">شاهد أعمالنا</a>
         </div>
+        <ul class="hero-assure reveal">
+          <li>رد خلال 24 ساعة</li>
+          <li>النطاق والموعد مكتوبان قبل التصوير</li>
+          <li>العرض مجاني وبلا التزام</li>
+        </ul>
       </div>
 
-      <a class="scroll-cue" href="#lab" aria-label="انتقل للأسفل">
+      <a class="scroll-cue" href="#work" aria-label="انتقل للأسفل">
         <span class="mouse"><span></span></span>
         <small>SCROLL · مرّر لتبدأ الحكاية</small>
       </a>
     </section>
 
-    <!-- Chapter 2 -->
+    <!-- Selected work -->
+    <section class="work chapter-navy" id="work">
+      <div class="container">
+        <header class="chapter-head reveal">
+          <span class="chapter-num">CHAPTER 02 — SELECTED WORK</span>
+          <h2>شاهد قبل أن تقرّر</h2>
+          <p>من مشروعنا مع مطعم جوديز: ريل للمنتج، صحن بموشن جرافيك، ونظرة على طريقة بنائنا للإيقاع في المونتاج. كل لقطة صوّرها ومنتجها فريق نقش، بلا مقاطع جاهزة وبلا توليد آلي. اضغط على أي عمل لمشاهدته كاملاً بالصوت.</p>
+        </header>
+
+        <div class="work-grid">
+          <button class="work-card reveal" data-src="media/joodys-fajita.mp4" data-title="جوديز — الفاهيتا">
+            <video muted loop playsinline preload="none" poster="media/joodys-fajita-poster.jpg" src="media/joodys-fajita-loop.mp4"></video>
+            <span class="work-meta">
+              <span class="work-tag">إعلان طعام · Reels</span>
+              <b>الفاهيتا</b>
+              <small dir="ltr">JOODY'S · 2026</small>
+            </span>
+            <span class="play" aria-hidden="true"></span>
+          </button>
+          <button class="work-card reveal" data-src="media/joodys-plate.mp4" data-title="جوديز — الصحن مع موشن جرافيك">
+            <video muted loop playsinline preload="none" poster="media/joodys-plate-poster.jpg" src="media/joodys-plate-loop.mp4"></video>
+            <span class="work-meta">
+              <span class="work-tag">تصوير + موشن جرافيك</span>
+              <b>صحن جوديز</b>
+              <small dir="ltr">JOODY'S · 2026</small>
+            </span>
+            <span class="play" aria-hidden="true"></span>
+          </button>
+          <button class="work-card reveal" data-src="media/joodys-edit.mp4" data-title="جوديز — خلف المونتاج">
+            <video muted loop playsinline preload="none" poster="media/joodys-edit-poster.jpg" src="media/joodys-edit-loop.mp4"></video>
+            <span class="work-meta">
+              <span class="work-tag">خلف الكواليس · المونتاج</span>
+              <b>كيف نبني الإيقاع</b>
+              <small dir="ltr">JOODY'S · EDIT TIMELINE</small>
+            </span>
+            <span class="play" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="work-foot reveal">
+          <p>تريد فيديو بهذا المستوى لعلامتك؟</p>
+          <a class="btn btn-gold" href="#contact" data-cta="work">اطلب عرضاً مشابهاً</a>
+          <a class="btn btn-ghost" href="https://instagram.com/nagsh.media" target="_blank" rel="noopener">أعمال أحدث على إنستغرام</a>
+        </div>
+      </div>
+
+      <dialog class="lightbox" id="lightbox" aria-label="مشغّل الفيديو">
+        <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">×</button>
+        <video id="lightboxVideo" controls playsinline></video>
+      </dialog>
+    </section>
+
+    <!-- Craft lab -->
     <section class="lab chapter-navy-grad" id="lab">
       <div class="container">
         <header class="chapter-head reveal">
-          <span class="chapter-num">CHAPTER 02 — THE CRAFT LAB</span>
-          <h2>هندسة المشهد والمزاج السينمائي</h2>
-          <p>نفس المشهد، ثلاثة انطباعات مختلفة تماماً. حرّك المؤشر وشاهد كيف يحوّل التلوين السينمائي بيانات الحساس الخام إلى شعور يبيع.</p>
+          <span class="chapter-num">CHAPTER 03 — THE CRAFT LAB</span>
+          <h2>المشهد نفسه، ثلاثة انطباعات</h2>
+          <p>التلوين السينمائي يقرّر ما يشعر به عميلك قبل أن يقرأ حرفاً. اختر مزاجاً أو حرّك الشريط، وشاهد كيف تتحول لقطة الكاميرا الخام إلى إحساس بالدفء أو بالهيبة.</p>
         </header>
 
         <div class="grader reveal">
@@ -156,111 +241,94 @@
         <div class="pillars">
           <article class="pillar glow reveal">
             <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="16" width="36" height="26" rx="3"/><path d="M6 16 l6-10 h8 l-6 10 M20 16 l6-10 h8 l-6 10 M34 16 l6-10 h2"/></svg>
-            <span class="en">PRODUCTION</span>
-            <h3>الإنتاج المتكامل</h3>
-            <p>من الفكرة والسيناريو وقائمة اللقطات إلى إدارة موقع التصوير. نخطط لكل تفصيلة مسبقاً كي يكون يوم التصوير سلساً وكل دقيقة منه محسوبة.</p>
+            <span class="en">ONE TEAM</span>
+            <h3>فريق واحد من الفكرة للتسليم</h3>
+            <p>الفكرة والسيناريو وقائمة اللقطات والتصوير والمونتاج عند الفريق نفسه. لا تشرح مشروعك لثلاث جهات، ولا تضيع التفاصيل بين المراحل.</p>
           </article>
           <article class="pillar glow reveal">
             <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="14" width="28" height="22" rx="3"/><path d="M32 21 l12-7 v22 l-12-7Z"/><circle cx="18" cy="25" r="6"/></svg>
-            <span class="en">CINEMATOGRAPHY</span>
-            <h3>التصوير السينمائي</h3>
-            <p>هندسة الإضاءة وحركة الكاميرا واختيار العدسات. نرسم بالضوء لنصنع عمقاً وملمساً يجعل منتجك يبدو كما يستحق.</p>
+            <span class="en">REAL FOOTAGE</span>
+            <h3>تصوير حقيقي، لا لقطات جاهزة</h3>
+            <p>نصوّر منتجك ومكانك وناسك بالإضاءة وحركة الكاميرا المناسبة. لا مقاطع مخزنة ولا مشاهد مولّدة آلياً تُعرض على أنها لك.</p>
           </article>
           <article class="pillar glow reveal">
             <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 12h40M4 24h40M4 36h40"/><rect x="10" y="8" width="12" height="8" rx="2"/><rect x="24" y="20" width="16" height="8" rx="2"/><rect x="6" y="32" width="20" height="8" rx="2"/><path d="M30 4v40"/></svg>
-            <span class="en">EDIT</span>
-            <h3>المونتاج السردي</h3>
-            <p>الإيقاع البصري، التلوين السينمائي، الموشن جرافيك والعناصر ثلاثية الأبعاد، وهندسة الصوت. نقصّ ونرتّب حتى تتحول اللقطات إلى قصة تُشاهد حتى الثانية الأخيرة.</p>
+            <span class="en">3D · MOTION · SOUND</span>
+            <h3>موشن وثلاثي أبعاد من الداخل</h3>
+            <p>الموشن جرافيك والعناصر ثلاثية الأبعاد والتلوين وتصميم الصوت يصنعها الفريق نفسه. هذا المزيج نادر عند استوديوهات بحجمنا، ويجعل الفيديو يُشاهد حتى الثانية الأخيرة.</p>
           </article>
         </div>
       </div>
-    </section>
-
-    <!-- Selected work -->
-    <section class="work chapter-navy-solid" id="work">
-      <div class="container">
-        <header class="chapter-head reveal">
-          <span class="chapter-num">CHAPTER 03 — SELECTED WORK</span>
-          <h2>أعمال صوّرناها بأيدينا</h2>
-          <p>كل لقطة هنا صوّرها ومنتجها فريق نقش، بلا مقاطع جاهزة وبلا توليد آلي. اضغط على أي عمل لمشاهدته كاملاً بالصوت.</p>
-        </header>
-
-        <div class="work-grid">
-          <button class="work-card reveal" data-src="media/joodys-fajita.mp4" data-title="جوديز — الفاهيتا">
-            <video muted loop playsinline preload="none" poster="media/joodys-fajita-poster.jpg" src="media/joodys-fajita-loop.mp4"></video>
-            <span class="work-meta">
-              <span class="work-tag">إعلان طعام · Reels</span>
-              <b>الفاهيتا</b>
-              <small dir="ltr">JOODY'S · 2026</small>
-            </span>
-            <span class="play" aria-hidden="true"></span>
-          </button>
-          <button class="work-card reveal" data-src="media/joodys-plate.mp4" data-title="جوديز — الصحن مع موشن جرافيك">
-            <video muted loop playsinline preload="none" poster="media/joodys-plate-poster.jpg" src="media/joodys-plate-loop.mp4"></video>
-            <span class="work-meta">
-              <span class="work-tag">تصوير + موشن جرافيك</span>
-              <b>صحن جوديز</b>
-              <small dir="ltr">JOODY'S · 2026</small>
-            </span>
-            <span class="play" aria-hidden="true"></span>
-          </button>
-          <button class="work-card reveal" data-src="media/joodys-edit.mp4" data-title="جوديز — خلف المونتاج">
-            <video muted loop playsinline preload="none" poster="media/joodys-edit-poster.jpg" src="media/joodys-edit-loop.mp4"></video>
-            <span class="work-meta">
-              <span class="work-tag">خلف الكواليس · المونتاج</span>
-              <b>كيف نبني الإيقاع</b>
-              <small dir="ltr">JOODY'S · EDIT TIMELINE</small>
-            </span>
-            <span class="play" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-
-      <dialog class="lightbox" id="lightbox" aria-label="مشغّل الفيديو">
-        <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">×</button>
-        <video id="lightboxVideo" controls playsinline></video>
-      </dialog>
     </section>
 
     <div class="divider-to-sand" aria-hidden="true">
       <svg viewBox="0 0 1440 140" preserveAspectRatio="none"><path d="M0 0 H1440 V60 C1180 140 900 20 720 70 S240 130 0 60Z" fill="#0F2537"/><path d="M0 60 C240 130 540 20 720 70 S1180 140 1440 60" fill="none" stroke="#C69963" stroke-width="1.5"/></svg>
     </div>
 
-    <!-- Chapter 3 -->
+    <!-- Services -->
     <section class="services chapter-sand" id="services">
       <div class="container">
         <header class="chapter-head reveal">
           <span class="chapter-num">CHAPTER 04 — SERVICES</span>
-          <h2>محتوى يُقاس أثره، لا عدد لقطاته</h2>
-          <p>كل خدمة نقدمها مصممة لهدف واحد: أن ترتفع قيمة علامتك في عين عميلك، وأن تتحوّل المشاهدة إلى قرار.</p>
+          <h2>ماذا نصنع لعلامتك</h2>
+          <p>ثلاث طرق للعمل معنا، كلها تنتهي بملفات جاهزة للنشر بمقاسات كل منصة. اختر الأقرب لحاجتك، وسنقترح عليك الباقي في العرض.</p>
         </header>
 
         <div class="service-grid">
           <article class="service reveal">
             <span class="service-no">01</span>
-            <span class="en">Commercials & Brand Films</span>
-            <h3>الإعلانات التجارية والأفلام الترويجية</h3>
-            <p>سرد بصري عالي التأثير يرفع مكانة علامتك ويقود المبيعات. نبني الإعلان على رسالة واضحة، ثم نصوغها بلغة سينمائية تجعل الجمهور يتوقف عن التمرير.</p>
-            <ul><li>كتابة الفكرة والسيناريو</li><li>موشن جرافيك وعناصر ثلاثية الأبعاد</li><li>نسخ مخصصة لكل منصة</li></ul>
+            <span class="en">Ads & Reels</span>
+            <h3>إعلان أو ريل لمنتجك</h3>
+            <p>للمطاعم والمقاهي والمتاجر التي تطلق منتجاً أو عرضاً أو موسماً. فيديو قصير مبني على رسالة واحدة واضحة، مصوّر ليوقف التمرير في أول ثانيتين.</p>
+            <ul><li>الفكرة والسيناريو وقائمة اللقطات</li><li>يوم تصوير مخطط مسبقاً</li><li>نسخ عمودية وأفقية لكل منصة</li></ul>
+            <a class="btn btn-dark" href="#contact" data-scope="إعلان أو ريل لمنتج">اطلب هذه الخدمة</a>
+          </article>
+          <article class="service featured reveal">
+            <span class="badge-special">الأنسب للنمو</span>
+            <span class="service-no">02</span>
+            <span class="en">Monthly Content</span>
+            <h3>باقة محتوى شهرية</h3>
+            <p>بدل أن تبحث عن مصوّر كل مرة، نصير فريق المحتوى لعلامتك. نتفق على خطة الشهر، نصوّر دفعة واحدة، ونسلّمك المقاطع على مدار الشهر بهوية بصرية ثابتة.</p>
+            <ul><li>خطة محتوى شهرية متفق عليها</li><li>جلسة تصوير لعدة مقاطع</li><li>هوية بصرية ثابتة في كل منشور</li></ul>
+            <a class="btn btn-gold" href="#contact" data-scope="باقة محتوى شهرية">اسأل عن الباقة الشهرية</a>
           </article>
           <article class="service reveal">
-            <span class="service-no">02</span>
-            <span class="en">Corporate & Documentary</span>
-            <h3>التغطيات السينمائية والأفلام الوثائقية</h3>
-            <p>توثيق سينمائي صادق للمؤسسات والعلامات الطموحة. نروي قصتكم الحقيقية؛ الناس، المكان، والإنجاز، بأسلوب يبني الثقة ويُعرض بفخر.</p>
+            <span class="service-no">03</span>
+            <span class="en">Brand Films & Coverage</span>
+            <h3>فيلم تعريفي أو تغطية</h3>
+            <p>للشركات والمؤسسات والفعاليات. نروي قصتكم الحقيقية: الناس والمكان والإنجاز، بأسلوب سينمائي يبني الثقة ويُعرض بفخر في موقعكم وعروضكم.</p>
             <ul><li>أفلام تعريفية ومؤسسية</li><li>تغطية الفعاليات والمؤتمرات</li><li>مقابلات وقصص نجاح</li></ul>
+            <a class="btn btn-dark" href="#contact" data-scope="فيلم تعريفي أو تغطية">اطلب هذه الخدمة</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Chapter 4 -->
-    <section class="team chapter-sand-light" id="team">
+    <!-- Process -->
+    <section class="process chapter-sand-light" id="process">
       <div class="container">
         <header class="chapter-head reveal">
-          <span class="chapter-num">CHAPTER 05 — THE CREATIVE MINDS</span>
-          <h2>عقول شابة برؤية سينمائية</h2>
-          <p>فريق صغير بما يكفي ليهتم بكل تفصيلة، وشغوف بما يكفي ليعامل مشروعك كأنه فيلمه الخاص.</p>
+          <span class="chapter-num">CHAPTER 05 — HOW WE WORK</span>
+          <h2>تعرف ما سيحدث قبل أن يبدأ</h2>
+          <p>لا مفاجآت في السعر ولا في الموعد. هكذا يسير كل مشروع معنا، من أول رسالة إلى آخر ملف.</p>
+        </header>
+        <ol class="process-steps">
+          <li class="reveal"><b>01</b><h3>أول رسالة</h3><p>تخبرنا بفكرتك وهدفك وموعدك. نسأل الأسئلة الصحيحة لنكتب موجزاً واضحاً للمشروع.</p></li>
+          <li class="reveal"><b>02</b><h3>عرض مكتوب</h3><p>نرسل لك النطاق والتسليمات والسعر والموعد كتابياً. لا نبدأ قبل أن توافق عليه.</p></li>
+          <li class="reveal"><b>03</b><h3>التحضير</h3><p>الفكرة والسيناريو وقائمة اللقطات والمواقع. تراها وتعتمدها قبل يوم التصوير.</p></li>
+          <li class="reveal"><b>04</b><h3>يوم التصوير</h3><p>فريق صغير منظم يعرف كل لقطة مسبقاً، فيمر اليوم بأقل إزعاج لعملك وضيوفك.</p></li>
+          <li class="reveal"><b>05</b><h3>المونتاج والتسليم</h3><p>مونتاج وتلوين وصوت وموشن، ثم جولات تعديل متفق عليها مسبقاً، وملفات نهائية بمقاس كل منصة.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team chapter-sand" id="team">
+      <div class="container">
+        <header class="chapter-head reveal">
+          <span class="chapter-num">CHAPTER 06 — THE CREATIVE MINDS</span>
+          <h2>الأشخاص الذين ستعمل معهم</h2>
+          <p>فريق بحريني صغير يدرس ويمارس صناعة الأفلام والرسوم المتحركة. ستتعامل معنا مباشرة، بلا وسطاء، من أول رسالة إلى التسليم.</p>
         </header>
 
         <div class="team-grid">
@@ -303,68 +371,111 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq chapter-sand-light" id="faq">
+      <div class="container narrow">
+        <header class="chapter-head reveal">
+          <span class="chapter-num">CHAPTER 07 — QUESTIONS</span>
+          <h2>أسئلة يسألها الجميع قبل أن يبدأ</h2>
+        </header>
+        <div class="faq-list reveal">
+          <details>
+            <summary>كم تكلفة الفيديو؟</summary>
+            <p>تعتمد على النطاق: عدد المقاطع، أيام التصوير، ووجود موشن جرافيك أو عناصر ثلاثية الأبعاد. بعد أن نفهم مشروعك نرسل لك عرضاً مكتوباً مفصلاً خلال 24 ساعة، مجاناً وبلا أي التزام.</p>
+          </details>
+          <details>
+            <summary>كم يستغرق المشروع؟</summary>
+            <p>نحدد موعد التسليم في العرض المكتوب قبل أن نبدأ، ونلتزم به. الريلز والإعلانات القصيرة أسرع بطبيعتها من الأفلام التعريفية والتغطيات. إذا كان عندك موعد إطلاق محدد، أخبرنا به من البداية.</p>
+          </details>
+          <details>
+            <summary>ماذا تحتاجون مني؟</summary>
+            <p>هدف الفيديو، والجمهور الذي تخاطبه، وأي مرجع أعجبك إن وُجد، وإتاحة المكان يوم التصوير. نتولى نحن الفكرة والتخطيط والتصوير والمونتاج.</p>
+          </details>
+          <details>
+            <summary>هل يمكنني طلب تعديلات؟</summary>
+            <p>نعم. عدد جولات التعديل مكتوب في العرض قبل البدء، حتى يكون واضحاً للطرفين ما المشمول. أي إضافة خارج النطاق نتفق عليها معك أولاً، بلا مفاجآت في الفاتورة.</p>
+          </details>
+          <details>
+            <summary>هل تستخدمون الذكاء الاصطناعي في الفيديو؟</summary>
+            <p>اللقطات التي نسلّمها مصوّرة فعلياً بفريقنا. لا نعرض مشاهد مولّدة آلياً أو لقطات مخزّنة على أنها تصويرنا لعلامتك.</p>
+          </details>
+          <details>
+            <summary>أين تصوّرون؟</summary>
+            <p>في مكانك داخل البحرين: مطعمك أو متجرك أو مكتبك أو موقع فعاليتك. نزور المكان قبل التصوير عند الحاجة لنخطط للإضاءة والزوايا.</p>
+          </details>
+          <details>
+            <summary>هل تعملون مع المشاريع الصغيرة والناشئة؟</summary>
+            <p>نعم. كثير من أفضل المحتوى يبدأ بمقطع واحد واضح الهدف. ابدأ بريل واحد، وإذا ناسبك أسلوبنا ننتقل معك إلى باقة شهرية.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <div class="divider-to-navy" aria-hidden="true">
       <svg viewBox="0 0 1440 140" preserveAspectRatio="none"><path d="M0 140 H1440 V70 C1200 0 960 120 720 70 S240 10 0 80Z" fill="#0F2537"/><path d="M0 80 C240 10 480 120 720 70 S1200 0 1440 70" fill="none" stroke="#C69963" stroke-width="1.5"/></svg>
     </div>
 
-    <!-- Chapter 5 -->
+    <!-- Contact -->
     <section class="contact chapter-navy-solid" id="contact">
       <div class="container narrow">
         <header class="chapter-head reveal">
-          <span class="chapter-num">CHAPTER 06 — ACTION</span>
-          <h2>لنصنع مشهدك القادم</h2>
-          <p>ثلاث خطوات فقط. أخبرنا بما تحتاجه، وسنعود إليك خلال 24 ساعة بتصور أولي وعرض واضح.</p>
+          <span class="chapter-num">CHAPTER 08 — START</span>
+          <h2>احصل على عرض لمشروعك</h2>
+          <p>خطوتان، أقل من دقيقة. يصلنا طلبك على واتساب، ونرد عليك خلال 24 ساعة بأسئلتنا أو بعرض مكتوب.</p>
         </header>
 
         <form class="configurator reveal" id="configurator" novalidate>
           <ol class="steps" aria-hidden="true">
-            <li class="active" data-step="1"><b>1</b>نوع المشروع</li>
-            <li data-step="2"><b>2</b>بياناتك</li>
-            <li data-step="3"><b>3</b>الإرسال</li>
+            <li class="active" data-step="1"><b>1</b>المشروع</li>
+            <li data-step="2"><b>2</b>التفاصيل والإرسال</li>
           </ol>
 
           <fieldset class="step-panel" data-panel="1">
-            <legend>ما نوع المشروع الذي تفكر فيه؟</legend>
-            <div class="pills" role="radiogroup">
-              <label class="pill"><input type="radio" name="scope" value="إعلان سينمائي"><span>إعلان سينمائي</span></label>
-              <label class="pill"><input type="radio" name="scope" value="إنتاج محتوى مستمر"><span>إنتاج محتوى مستمر</span></label>
-              <label class="pill"><input type="radio" name="scope" value="تجربة رقمية وموقع إبداعي"><span>تجربة رقمية وموقع إبداعي</span></label>
+            <legend>ما الذي تحتاجه؟</legend>
+            <div class="pills" role="radiogroup" aria-label="نوع المشروع">
+              <label class="pill"><input type="radio" name="scope" value="إعلان أو ريل لمنتج"><span>إعلان أو ريل لمنتج</span></label>
+              <label class="pill"><input type="radio" name="scope" value="باقة محتوى شهرية"><span>باقة محتوى شهرية</span></label>
+              <label class="pill"><input type="radio" name="scope" value="فيلم تعريفي أو تغطية"><span>فيلم تعريفي أو تغطية</span></label>
+              <label class="pill"><input type="radio" name="scope" value="لست متأكداً بعد"><span>لست متأكداً بعد</span></label>
             </div>
             <p class="error" data-error="scope"></p>
+            <p class="sub-legend">متى تحتاجه؟ <small>(اختياري)</small></p>
+            <div class="pills small" role="radiogroup" aria-label="الموعد">
+              <label class="pill"><input type="radio" name="when" value="خلال أسبوعين"><span>خلال أسبوعين</span></label>
+              <label class="pill"><input type="radio" name="when" value="خلال شهر"><span>خلال شهر</span></label>
+              <label class="pill"><input type="radio" name="when" value="بعد أكثر من شهر"><span>بعد أكثر من شهر</span></label>
+              <label class="pill"><input type="radio" name="when" value="لم أحدد بعد"><span>لم أحدد بعد</span></label>
+            </div>
             <div class="step-actions"><button type="button" class="btn btn-gold" data-next>التالي</button></div>
           </fieldset>
 
           <fieldset class="step-panel" data-panel="2" hidden>
             <legend>عرّفنا بك وبمشروعك</legend>
             <div class="fields">
-              <label class="field"><span>الاسم</span><input name="name" autocomplete="name" required></label>
-              <label class="field"><span>اسم العلامة / الشركة</span><input name="brand" autocomplete="organization" required></label>
-              <label class="field"><span>رقم الهاتف / واتساب</span><input name="phone" type="tel" dir="ltr" autocomplete="tel" placeholder="+973 3XXX XXXX" required pattern="[+0-9\s\-]{8,}"></label>
-              <label class="field full"><span>نبذة عن المشروع</span><textarea name="brief" rows="4" placeholder="الفكرة، الموعد المتوقع، أو أي مرجع أعجبك..."></textarea></label>
+              <label class="field"><span>اسمك</span><input name="name" autocomplete="name" required></label>
+              <label class="field"><span>العلامة / الشركة <small>(اختياري)</small></span><input name="brand" autocomplete="organization"></label>
+              <label class="field full"><span>نبذة عن المشروع <small>(اختياري)</small></span><textarea name="brief" rows="4" placeholder="ما الذي تريد الترويج له؟ هل هناك موعد إطلاق أو مرجع أعجبك؟"></textarea></label>
             </div>
             <p class="error" data-error="fields"></p>
+            <p class="form-note">عند الإرسال يفتح واتساب برسالة جاهزة فيها طلبك، فقط اضغط «إرسال». نستخدم بياناتك للرد على طلبك فقط.</p>
             <div class="step-actions">
               <button type="button" class="btn btn-ghost" data-prev>السابق</button>
-              <button type="button" class="btn btn-gold" data-next>التالي</button>
-            </div>
-          </fieldset>
-
-          <fieldset class="step-panel" data-panel="3" hidden>
-            <legend>راجع طلبك</legend>
-            <dl class="summary" id="summary"></dl>
-            <div class="step-actions">
-              <button type="button" class="btn btn-ghost" data-prev>تعديل</button>
-              <button type="submit" class="btn btn-gold btn-submit" id="submitBtn"><span>أرسل الطلب</span></button>
+              <button type="submit" class="btn btn-gold btn-submit" id="submitBtn"><span>أرسل عبر واتساب</span></button>
             </div>
           </fieldset>
 
           <div class="success" id="success" hidden>
             <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M24 41 l11 11 l21 -24"/></svg>
-            <h3>وصلنا طلبك. <span class="gold">المشهد بدأ.</span></h3>
+            <h3>خطوة أخيرة: <span class="gold">اضغط «إرسال» في واتساب.</span></h3>
             <p id="successMsg"></p>
-            <button type="button" class="btn btn-ghost" id="resetBtn">طلب جديد</button>
+            <div class="step-actions center">
+              <a class="btn btn-gold" id="waRetry" href="#" target="_blank" rel="noopener">لم يُفتح واتساب؟ افتحه من هنا</a>
+              <button type="button" class="btn btn-ghost" id="resetBtn">طلب جديد</button>
+            </div>
           </div>
         </form>
+
+        <p class="alt-contact reveal">تفضّل الكلام مباشرة؟ <a href="https://wa.me/97339006824" target="_blank" rel="noopener" data-cta="direct">راسلنا على واتساب</a> أو <a href="mailto:nagsh.media@gmail.com" dir="ltr">nagsh.media@gmail.com</a></p>
       </div>
     </section>
   </main>
@@ -381,12 +492,18 @@
       </div>
       <div class="footer-meta">
         <span class="loc">BAHRAIN · البحرين</span>
+        <a href="https://wa.me/97339006824" target="_blank" rel="noopener" data-cta="footer">واتساب: <bdi dir="ltr">+973 3900 6824</bdi></a>
         <a href="https://instagram.com/nagsh.media" target="_blank" rel="noopener" dir="ltr">@nagsh.media</a>
         <a href="mailto:nagsh.media@gmail.com" dir="ltr">nagsh.media@gmail.com</a>
       </div>
     </div>
     <p class="copy">© <span id="year"></span> Naqsh Studio — استوديو نقش. جميع الحقوق محفوظة.</p>
   </footer>
+
+  <a class="wa-float" id="waFloat" href="https://wa.me/97339006824" target="_blank" rel="noopener" data-cta="float" aria-label="راسلنا على واتساب">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3Z" fill="currentColor"/></svg>
+    <span>راسلنا</span>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
