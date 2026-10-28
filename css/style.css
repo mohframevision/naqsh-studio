@@ -238,7 +238,7 @@ input[type="range"] { width: 100%; accent-color: var(--gold); direction: ltr; he
 
 /* Services */
 .services { padding-top: clamp(40px, 6vw, 80px); }
-.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 24px); }
+.service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2vw, 24px); }
 .service { position: relative; padding: clamp(26px, 3vw, 38px); border-radius: var(--radius); background: var(--sand-light); border: 1px solid rgba(15, 37, 55, .08); box-shadow: 0 20px 50px -30px rgba(15, 37, 55, .35); transition: transform .5s var(--ease), box-shadow .5s; }
 .service:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -30px rgba(15, 37, 55, .5); }
 .service:nth-child(2) { --d: .1s; } .service:nth-child(3) { --d: .2s; }
@@ -249,10 +249,6 @@ input[type="range"] { width: 100%; accent-color: var(--gold); direction: ltr; he
 .service ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; font-size: .9rem; }
 .service li { display: flex; gap: .6rem; align-items: center; }
 .service li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex: none; }
-.service.featured { background: var(--navy); color: var(--cream); border-color: rgba(198, 153, 99, .4); }
-.service.featured p { color: var(--muted-dark); }
-.service.featured .en { color: var(--gold); }
-.badge-special { position: absolute; top: 20px; inset-inline-end: 20px; font-size: .72rem; padding: .3em .9em; border-radius: 999px; background: var(--gold); color: var(--navy-deep); font-weight: 600; }
 
 /* Team */
 /* Five members: three on top, two centred below */
