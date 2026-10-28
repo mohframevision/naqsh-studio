@@ -173,42 +173,7 @@
   $('#lightboxClose').addEventListener('click', () => lightbox.close());
   lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
 
-  /* ---------- Fine-dining menu preview ---------- */
-  const menu = {
-    coffee: [
-      { name: 'V60 إثيوبي ييرغاتشيفي', desc: 'نكهات الياسمين والليمون الأسود، تُحضّر أمامك ببطء.', price: '3.8', sig: true },
-      { name: 'كورتادو بحليب الشوفان', desc: 'إسبريسو مزدوج بقوام حريري ولمسة كراميل.', price: '2.4' },
-      { name: 'قهوة عربية بالهيل والزعفران', desc: 'وصفة البيت، تُقدّم مع تمر خلاص منتقى.', price: '2.2' },
-      { name: 'كولد برو ١٨ ساعة', desc: 'منقوع على البارد، ناعم بلا مرارة.', price: '2.9' }
-    ],
-    mains: [
-      { name: 'ريزوتو الكمأ الأسود', desc: 'أرز أربوريو كريمي، بارميزان معتّق ٢٤ شهراً.', price: '12.5', sig: true },
-      { name: 'هامور مشوي على الفحم', desc: 'صلصة الليمون المحروق وخضار الموسم.', price: '9.8' },
-      { name: 'ضلع لحم بطيء الطهي', desc: '١٢ ساعة على نار هادئة، بهارات بحرينية دافئة.', price: '14' },
-      { name: 'باستا البحر', desc: 'روبيان الخليج، طماطم مدخّنة وريحان طازج.', price: '8.6' }
-    ],
-    desserts: [
-      { name: 'كنافة الفستق بالكريمة', desc: 'تُخبز عند الطلب، تُقدّم ساخنة بماء الورد.', price: '4.2', sig: true },
-      { name: 'تشيز كيك الزعفران', desc: 'قاعدة بسكويت بالهيل وصوص التمر.', price: '3.6' },
-      { name: 'فوندان الشوكولاتة الداكنة', desc: 'قلب ذائب ٧٠٪ كاكاو وآيس كريم الفانيلا.', price: '3.9' }
-    ]
-  };
-  const menuList = $('#menuList');
-  const menuTabs = $$('.menu-tabs button');
   const esc = s => s.replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
-  const renderMenu = key => {
-    menuList.innerHTML = menu[key].map((it, i) => `
-      <li class="menu-item${it.sig ? ' signature' : ''}" style="--i:${i}">
-        <h5>${esc(it.name)}${it.sig ? '<span class="sig-badge">Signature · توقيع الشيف</span>' : ''}</h5>
-        <p>${esc(it.desc)}</p>
-        <span class="price">${it.price}</span>
-      </li>`).join('');
-  };
-  menuTabs.forEach(btn => btn.addEventListener('click', () => {
-    menuTabs.forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-selected', b === btn); });
-    renderMenu(btn.dataset.tab);
-  }));
-  renderMenu('coffee');
 
   /* ---------- Project configurator ---------- */
   const form = $('#configurator');
