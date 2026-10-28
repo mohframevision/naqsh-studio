@@ -286,10 +286,12 @@ input[type="range"] { width: 100%; accent-color: var(--gold); direction: ltr; he
 .sig-badge { font-size: .66rem; padding: .15em .7em; border-radius: 999px; background: var(--gold); color: var(--navy-deep); font-weight: 600; letter-spacing: .02em; }
 
 /* Team */
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2vw, 24px); }
+/* Five members: three on top, two centred below */
+.team-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(16px, 2vw, 24px); }
 .member-no { display: block; font-family: var(--en); font-size: 2.6rem; line-height: 1; color: var(--gold); margin-bottom: 2.2rem; }
 .member { position: relative; padding: clamp(26px, 3vw, 40px); border-radius: var(--radius); background: #fff8ef; border: 1px solid rgba(15, 37, 55, .08); overflow: hidden; transition: transform .5s var(--ease), box-shadow .5s; }
-.member:nth-child(2) { --d: .1s; } .member:nth-child(3) { --d: .2s; } .member:nth-child(4) { --d: .3s; }
+.member:nth-child(2) { --d: .1s; } .member:nth-child(3) { --d: .2s; } .member:nth-child(4) { --d: .3s; } .member:nth-child(5) { --d: .4s; }
+.member { grid-column: span 2; } .member:nth-child(4) { grid-column: 2 / span 2; }
 .member:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -35px rgba(15, 37, 55, .45); }
 .motif { position: absolute; top: 24px; inset-inline-end: 24px; width: 64px; height: 64px; fill: none; stroke: var(--gold); stroke-width: 1.4; opacity: .7; transition: transform .8s var(--ease); }
 .member:hover .motif { transform: rotate(90deg); }
@@ -360,6 +362,7 @@ legend { font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 600; margin-bott
   .grader, .menu-showcase { grid-template-columns: 1fr; }
   .pillars, .service-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .member:nth-child(n) { grid-column: auto; } .member:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 760px) {
   .nav { gap: 1rem; }
